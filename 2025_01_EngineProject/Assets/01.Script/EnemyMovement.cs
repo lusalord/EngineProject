@@ -1,12 +1,10 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace _01.Script
 {
     public class EnemyMovement : MonoBehaviour
     {
-        public float detectRadius; // ???? ????
+        public float detectRadius; // 플레이어 감지 반지름
 
         private Collider2D[] _collider;
 

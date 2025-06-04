@@ -1,11 +1,17 @@
-using System;
+using System.Collections;
 using UnityEngine;
 
-namespace _01.Script
+namespace _01.Script.Player
 {
     public class PlayerAttack : MonoBehaviour
     {
         [SerializeField] private PlayerInputSo playerInputSo;
+        public Collider2D point;
+
+        private void Start()
+        {
+            point.enabled = false;
+        }
 
         private void OnEnable()
         {
@@ -14,7 +20,14 @@ namespace _01.Script
 
         private void TryAttack()
         {
-            Debug.Log("Attack!");
+            point.enabled = true;
+            StartCoroutine(WaitSpawnCollider());
+        }
+
+        private IEnumerator WaitSpawnCollider()
+        {
+            yield return new WaitForSeconds(0.1f);
+            point.enabled = false;
         }
     }
 }

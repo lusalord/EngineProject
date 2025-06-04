@@ -1,20 +1,22 @@
-using System;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+namespace _01.Script.Manager
 {
-    public static UIManager Instance { get; private set; }
-
-    private void Awake()
+    public class UIManager : MonoBehaviour
     {
-        if (Instance == null)
+        private static UIManager Instance { get; set; }
+
+        private void Awake()
         {
-            Instance = this;
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
     
+    }
 }
