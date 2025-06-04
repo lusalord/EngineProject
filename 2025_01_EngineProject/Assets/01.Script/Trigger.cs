@@ -10,12 +10,13 @@ namespace _01.Script
 
         private void Start()
         {
-            tilemap.gameObject.SetActive(false);
+            tilemap.gameObject.SetActive(false);//≈∏¿œ 
         }
 
-        private void OnTriggerExit2D(Collider2D other)
+        private void OnTriggerEnter2D(Collider2D other)
         {
             tilemap.gameObject.SetActive(true);
+            Destroy(gameObject);
         }
     }
 }

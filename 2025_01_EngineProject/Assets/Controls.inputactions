@@ -31,15 +31,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "AIm",
-                    "type": "Value",
-                    "id": "5f7ab095-7299-439e-ae58-c926b4642fdc",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -271,17 +262,6 @@
                     "processors": "",
                     "groups": "XR",
                     "action": "Jump",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "5db0265b-b150-4592-b558-a718e901f80e",
-                    "path": "<Mouse>/{Point}",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": ";Keyboard&Mouse",
-                    "action": "AIm",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

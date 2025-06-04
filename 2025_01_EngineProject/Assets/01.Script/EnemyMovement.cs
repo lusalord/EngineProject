@@ -6,7 +6,7 @@ namespace _01.Script
 {
     public class EnemyMovement : MonoBehaviour
     {
-        public float detectRadius; // 감지 범위
+        public float detectRadius; // ???? ????
 
         private Collider2D[] _collider;
 
