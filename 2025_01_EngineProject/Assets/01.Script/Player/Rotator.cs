@@ -13,7 +13,7 @@ namespace _01.Script.Player
 
         private void Update()
         {
-            Vector2 mousePos = _camera.ScreenToWorldPoint(Input.mousePosition);
+            Vector2 mousePos = _camera.ScreenToWorldPoint(Input.mousePosition); // 마우스 좌표 위치 찾아줌
             Vector2 dirVec = mousePos - (Vector2)transform.position;
         
             transform.up = dirVec.normalized;
