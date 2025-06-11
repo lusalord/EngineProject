@@ -8,7 +8,7 @@ namespace _01.Script.Manager
         [field: SerializeField] public GameOver GameOverUI { get; private set; }
         [field: SerializeField] public HealthBarUI HealthUI { get; private set; }
             
-        public static UIManager Instance { get; set; }
+        public static UIManager Instance { get; private set; }
 
         private void Awake()
         {

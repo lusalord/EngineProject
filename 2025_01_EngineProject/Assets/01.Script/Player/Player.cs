@@ -14,7 +14,6 @@ public class Player : MonoBehaviour
 
     private void Start()
     {
-        // UIManager.Instance.HealthUI.InitHealth();
-            
+        UIManager.Instance.HealthUI.InitHealth(_healthSystem.Health);
     }
 }

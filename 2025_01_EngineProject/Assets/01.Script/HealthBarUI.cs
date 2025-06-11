@@ -8,27 +8,33 @@ namespace _01.Script
     public class HealthBarUI : MonoBehaviour
     {
         public Slider healthSlider;
-        private int _healthCount = 0;
         private HealthSystem _healthSystem;
         
-        
+        /// <summary>
+        /// 최대 체력을 설정함.
+        /// </summary>
         private float[] _healthBarWidth;
-
-        private float damageHealthbarSize;
-
-        private void Awake()
-        {
-        }
+        private float _damageHealthBarSize;
 
         private void Start()
         {
-            damageHealthbarSize = _healthSystem.Health;
             _healthSystem = GameManager.instance.Player.GetComponent<HealthSystem>();
+            _damageHealthBarSize = _healthSystem.Health;
         }
-
-        private void Update()
+        
+        public void InitHealth(int life)
         {
-            healthSlider.value = _healthSystem.Health / damageHealthbarSize;
+            healthSlider.maxValue = life;
+            healthSlider.value = life;
+        }
+        
+        /// <summary>
+        /// 현재 체력을 반영함.
+        /// </summary>
+        public void UpdateHealthUI(int currentHealth)
+        {
+            healthSlider.value = currentHealth;
+            // healthSlider.value = _healthSystem.Health / _damageHealthBarSize;
         }
     }
 }
