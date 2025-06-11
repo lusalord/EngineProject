@@ -8,15 +8,16 @@ namespace _01.Script
 {
     public class EnemyAttack : MonoBehaviour
     {
-        private int _damage = 1;
-        
-        private float _damageTimer;
-        private IDamageable _damageable;
-        private bool _isPlayerInRange;
+        private int damage = 1;
+        HealthSystem healthSystem;
 
-        private void OnCollisionStay2D(Collision2D other)
+        private void OnCollisionEnter2D(Collision2D other)
         {
+            Debug.Log("공격");
+            healthSystem = other.gameObject.GetComponent<HealthSystem>();
             
+            healthSystem.GetDamaged(damage);
+            Debug.Log(healthSystem.Health);
         }
     }
 }

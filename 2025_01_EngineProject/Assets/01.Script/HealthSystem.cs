@@ -17,7 +17,7 @@ namespace _01.Script.Player
         private void Awake()
         {
             _healthBarUI = GetComponent<HealthBarUI>();
-            Health = maxHealth;
+            Health = maxHealth; // 인스펙터 창에서 입력한 최대 체력을 Health 프로퍼티에 넣음
         }
 
         public void GetDamaged(int damage)

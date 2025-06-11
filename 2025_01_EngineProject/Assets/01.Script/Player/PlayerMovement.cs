@@ -8,7 +8,6 @@ namespace _01.Script
     {
         [SerializeField] PlayerInputSo playerInput;
         
-        private Vector2 _moveDir;
         [SerializeField] private float _moveSpeed = 10f;
         private Rigidbody2D _rb;
 
@@ -21,11 +20,21 @@ namespace _01.Script
         private void Update()
         {
             _rb.linearVelocity = playerInput.moveDir * _moveSpeed;
+            FlipX();
+            Debug.Log(playerInput.moveDir);
         }
+        
 
-        public void OnMove(InputValue value)
+        private void FlipX() // 플레이어 반전
         {
-            _moveDir = value.Get<Vector2>();
+            if (playerInput.moveDir.x < 0)
+            {
+                transform.localScale = new Vector3(2, 2, 2);
+            }
+            else if (playerInput.moveDir.x > 0)
+            {
+                transform.localScale = new Vector3(-2, 2, 2);
+            }
         }
     }
 }
