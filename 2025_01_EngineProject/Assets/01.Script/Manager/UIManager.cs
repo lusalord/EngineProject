@@ -1,20 +1,26 @@
-using System;
 using UnityEngine;
 
-public class UIManager : MonoBehaviour
+namespace _01.Script.Manager
 {
-    public static UIManager Instance { get; private set; }
-
-    private void Awake()
+    public class UIManager : MonoBehaviour
     {
-        if (Instance == null)
+        [field: SerializeField] public GameObject ScoreUI { get; private set; }
+        [field: SerializeField] public GameOver GameOverUI { get; private set; }
+        [field: SerializeField] public HealthBarUI HealthUI { get; private set; }
+            
+        public static UIManager Instance { get; private set; }
+
+        private void Awake()
         {
-            Instance = this;
+            if (Instance == null)
+            {
+                Instance = this;
+            }
+            else
+            {
+                Destroy(gameObject);
+            }
         }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
     
+    }
 }

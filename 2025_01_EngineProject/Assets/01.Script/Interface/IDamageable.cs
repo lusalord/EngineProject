@@ -4,6 +4,6 @@ namespace _01.Script.Interface
 {
     public interface IDamageable
     {
-        public void GetDamaged(int damage, GameObject dealer);
+        public void GetDamaged(int damage);
     }
 }
