@@ -11,7 +11,8 @@ public class Player : MonoBehaviour
     private void Awake()
     {
         _healthSystem = GetComponent<HealthSystem>();
-        _healthSystem.OnDamaged += UpdateHealthUI;
+        _healthSystem.OnDamaged += UpdateHealthUI; //  UpdateHealthUI 메서드를 OnDamaged 델리게이트에 추가함.
+        
     }
 
     private void Start()

@@ -18,14 +18,14 @@ namespace _01.Script
 
         private void Start()
         {
-            _healthSystem = GameManager.instance.Player.GetComponent<HealthSystem>();
+            _healthSystem = GameManager.Instance.Player.GetComponent<HealthSystem>();
             _damageHealthBarSize = _healthSystem.Health;
         }
         
         public void InitHealth(int life)
         {
-            healthSlider.maxValue = life;
-            healthSlider.value = life;
+            healthSlider.maxValue = life; // health 슬라이더의 최대값을 life에 들어오는 값(5)으로 고정시킴.
+            healthSlider.value = life; // health 슬라이더의 현재값을 life로 변경.
         }
         
         /// <summary>
@@ -33,7 +33,7 @@ namespace _01.Script
         /// </summary>
         public void UpdateHealthUI(int currentHealth)
         {
-            healthSlider.value = currentHealth;
+            healthSlider.value = currentHealth; // health 슬라이더의 현재값을 currentHealth의 값으로 업데이트 시킨다.
             // healthSlider.value = _healthSystem.Health / _damageHealthBarSize;
         }
     }

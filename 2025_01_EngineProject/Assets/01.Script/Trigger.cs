@@ -9,7 +9,7 @@ namespace _01.Script
 
         private void Start()
         {
-            tilemap.gameObject.SetActive(false);//초기 문 안보이게 하기
+            tilemap.gameObject.SetActive(false); //초기 문 안보이게 하기
         }
 
         private void OnTriggerEnter2D(Collider2D other)
