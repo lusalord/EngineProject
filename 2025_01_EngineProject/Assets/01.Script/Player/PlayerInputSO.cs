@@ -2,14 +2,14 @@ using System;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-namespace _01.Script
+namespace _01.Script.Player
 {
     [CreateAssetMenu(fileName = "PlayerInputSO", menuName = "SO/PlayerInput")]
     public class PlayerInputSo : ScriptableObject, Controls.IPlayerActions
     {
         private Controls _controls;
         
-        [SerializeField] public Vector2 moveDir;
+        public Vector2 moveDir;
 
         public event Action OnAttackPressed;
 

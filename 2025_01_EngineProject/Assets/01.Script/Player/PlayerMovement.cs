@@ -1,14 +1,13 @@
-using System;
 using UnityEngine;
-using UnityEngine.InputSystem;
+using UnityEngine.Serialization;
 
-namespace _01.Script
+namespace _01.Script.Player
 {
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] PlayerInputSo playerInput;
         
-        [SerializeField] private float _moveSpeed = 10f;
+        [SerializeField] private float moveSpeed = 10f;
         private Rigidbody2D _rb;
 
         private void Awake()
@@ -19,9 +18,9 @@ namespace _01.Script
 
         private void Update()
         {
-            _rb.linearVelocity = playerInput.moveDir * _moveSpeed;
+            _rb.linearVelocity = playerInput.moveDir * moveSpeed;
             FlipX();
-            Debug.Log(playerInput.moveDir);
+//            Debug.Log(playerInput.moveDir);
         }
         
 

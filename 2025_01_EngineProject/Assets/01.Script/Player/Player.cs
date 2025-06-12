@@ -22,6 +22,7 @@ public class Player : MonoBehaviour
 
     private void UpdateHealthUI()
     {
+        Debug.Log("ddddddddd");
         UIManager.Instance.HealthUI.UpdateHealthUI(_healthSystem.Health);
     }
 

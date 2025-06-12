@@ -24,6 +24,7 @@ namespace _01.Script.Player
         {
             Health -= damage;
             Health = Mathf.Clamp(Health, 0, maxHealth);
+            Debug.Log("invoke");
             OnDamaged?.Invoke();
 
             if (Health <= 0)
