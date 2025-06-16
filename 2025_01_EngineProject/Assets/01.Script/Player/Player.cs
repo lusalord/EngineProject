@@ -1,4 +1,5 @@
 using System;
+using _01.Script;
 using _01.Script.Manager;
 using _01.Script.Player;
 using Unity.VisualScripting;

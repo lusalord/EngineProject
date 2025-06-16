@@ -55921,6 +55921,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <Health>k__BackingField: 0
   maxHealth: 5
+  isDead: 0
 --- !u!114 &858305843
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -56035,6 +56036,8 @@ GameObject:
   - component: {fileID: 959246221}
   - component: {fileID: 959246222}
   - component: {fileID: 959246223}
+  - component: {fileID: 959246224}
+  - component: {fileID: 959246225}
   m_Layer: 0
   m_Name: PajeonEnemy
   m_TagString: PajeonEnemy
@@ -56236,6 +56239,33 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 1abb4ececedde3d40bfcb9afa228923b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &959246224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959246215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc3a16b53f60f0649b682cf85e982aa3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <Health>k__BackingField: 0
+  maxHealth: 8
+  isDead: 0
+--- !u!114 &959246225
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 959246215}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf14083bd9435f41a9709abf96727f7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &1108036015

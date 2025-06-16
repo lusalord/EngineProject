@@ -1,9 +1,9 @@
 using System;
 using _01.Script.Interface;
-using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 
-namespace _01.Script.Player
+namespace _01.Script
 {
     public class HealthSystem : MonoBehaviour, IDamageable
     {
@@ -12,7 +12,7 @@ namespace _01.Script.Player
         [field: SerializeField] public int Health { get; private set; }
         [SerializeField] private int maxHealth = 5;
         private HealthBarUI _healthBarUI;
-        private bool _isDead;
+        public bool isDead;
 
         private void Awake()
         {
@@ -29,7 +29,7 @@ namespace _01.Script.Player
 
             if (Health <= 0)
             {
-                _isDead = true;
+                isDead = true;
             }
         }
     }
