@@ -1,14 +1,13 @@
-using System;
+using _01.Script.Interface;
 using UnityEngine;
-using UnityEngine.InputSystem;
 
-namespace _01.Script
+namespace _01.Script.Player
 {
     public class PlayerMovement : MonoBehaviour
     {
         [SerializeField] PlayerInputSo playerInput;
         
-        [SerializeField] private float _moveSpeed = 10f;
+        [SerializeField] private float moveSpeed = 10f;
         private Rigidbody2D _rb;
 
         private void Awake()
@@ -19,9 +18,9 @@ namespace _01.Script
 
         private void Update()
         {
-            _rb.linearVelocity = playerInput.moveDir * _moveSpeed;
+            _rb.linearVelocity = playerInput.moveDir * moveSpeed;
             FlipX();
-            Debug.Log(playerInput.moveDir);
+//            Debug.Log(playerInput.moveDir);
         }
         
 
@@ -34,6 +33,15 @@ namespace _01.Script
             else if (playerInput.moveDir.x > 0)
             {
                 transform.localScale = new Vector3(-2, 2, 2);
+            }
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.gameObject.TryGetComponent(out IItem item))
+            {
+                item.Use(gameObject);
+                Destroy(collision.gameObject);
             }
         }
     }
