@@ -1,8 +1,7 @@
 using System.Collections;
-using _01.Script.Player;
 using UnityEngine;
 
-namespace _01.Script
+namespace _01.Script.Enemy
 {
     public class EnemyAttack : MonoBehaviour
     {
@@ -15,7 +14,6 @@ namespace _01.Script
             _healthSystem = other.gameObject.GetComponent<HealthSystem>(); //부딪힌 오브젝트의 healthSystem을 가져옴
             if (_isAttack)
             {
-                Debug.Log("공격");
                 StartCoroutine(Attack());
             }
         }

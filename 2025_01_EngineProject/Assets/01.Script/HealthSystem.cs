@@ -22,7 +22,7 @@ namespace _01.Script
 
         public void GetDamaged(int damage)
         {
-            Health -= damage;
+            Health -= damage; // Health의 
             Health = Mathf.Clamp(Health, 0, maxHealth);
             Debug.Log("invoke");
             OnDamaged?.Invoke();

@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace _01.Script
+namespace _01.Script.Enemy
 {
     public class EnemyMovement : MonoBehaviour
     {
@@ -32,6 +32,11 @@ namespace _01.Script
             if (playerCollider != null)
             {
                 _moveDir = playerCollider.transform.position - transform.position;
+                if (_moveDir.x < 0)
+                    transform.localScale = new Vector3(2, 2, 2); // 왼쪽을 바라봄
+                    
+                else
+                    transform.localScale = new Vector3(-2, 2, 2); // 오른쪽을 바라봄
                 _moveDir.Normalize();
             }
             else
