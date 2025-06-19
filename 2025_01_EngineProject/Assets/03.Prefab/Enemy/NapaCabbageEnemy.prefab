@@ -15,6 +15,8 @@ GameObject:
   - component: {fileID: 6407836129971273018}
   - component: {fileID: 435065728728426011}
   - component: {fileID: -3193181776243990157}
+  - component: {fileID: -8248671929490107176}
+  - component: {fileID: -276176271197123648}
   m_Layer: 0
   m_Name: NapaCabbageEnemy
   m_TagString: Untagged
@@ -221,3 +223,29 @@ MonoBehaviour:
   <Health>k__BackingField: 0
   maxHealth: 10
   isDead: 0
+--- !u!114 &-8248671929490107176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559585908050984250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9c5d71d8184843146be466a8d72b9c86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  napePrefab: {fileID: 5027722805469719147, guid: d58750faf3aa9d748874646115386384, type: 3}
+--- !u!114 &-276176271197123648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559585908050984250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bcf14083bd9435f41a9709abf96727f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  itemPrefab: {fileID: 5027722805469719147, guid: 2bd203f0d8b5a9543b4cd0918e25d852, type: 3}

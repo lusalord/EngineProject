@@ -1,4 +1,5 @@
 using _01.Script.Interface;
+using Unity.VisualScripting;
 using UnityEngine;
 
 namespace _01.Script.Player
@@ -9,6 +10,8 @@ namespace _01.Script.Player
         
         [SerializeField] private float moveSpeed = 10f;
         private Rigidbody2D _rb;
+
+        
 
         private void Awake()
         {
@@ -38,10 +41,14 @@ namespace _01.Script.Player
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
+            // 충돌한 대상이 아이템이면
             if (collision.gameObject.TryGetComponent(out IItem item))
             {
-                item.Use(gameObject);
-                Destroy(collision.gameObject);
+                if (!transform.root.CompareTag("Point")) // 포인트가 아닌지 확인
+                {
+                    item.Use(gameObject); // 아이템 사용
+                    Destroy(collision.gameObject); // 아이템 제거
+                }
             }
         }
     }
