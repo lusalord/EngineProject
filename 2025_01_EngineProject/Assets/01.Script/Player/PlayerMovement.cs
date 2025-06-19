@@ -11,8 +11,7 @@ namespace _01.Script.Player
         [SerializeField] private float moveSpeed = 10f;
         private Rigidbody2D _rb;
 
-        public bool isGetPa;
-        public bool isGetNapa;
+        
 
         private void Awake()
         {
@@ -45,7 +44,7 @@ namespace _01.Script.Player
             // 충돌한 대상이 아이템이면
             if (collision.gameObject.TryGetComponent(out IItem item))
             {
-                if (!transform.root.CompareTag("Point")) // 최상위가 Player인지 확인
+                if (!transform.root.CompareTag("Point")) // 포인트가 아닌지 확인
                 {
                     item.Use(gameObject); // 아이템 사용
                     Destroy(collision.gameObject); // 아이템 제거

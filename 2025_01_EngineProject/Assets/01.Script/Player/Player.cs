@@ -6,7 +6,8 @@ namespace _01.Script.Player
     public class Player : MonoBehaviour
     {
         private HealthSystem _healthSystem;
-        
+        public bool isGetPa;
+        public bool isGetNapa;
 
         private void Awake()
         {
