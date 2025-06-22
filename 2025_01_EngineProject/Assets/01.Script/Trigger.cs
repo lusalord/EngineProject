@@ -14,8 +14,12 @@ namespace _01.Script
 
         private void OnTriggerEnter2D(Collider2D other)
         {
-            tilemap.gameObject.SetActive(true); // 플레이어 방에 들어오면 문 활성화
-            Destroy(gameObject); // 트리거 삭제;
+            if (other.CompareTag("Player"))
+            {
+                tilemap.gameObject.SetActive(true); // 플레이어 방에 들어오면 문 활성화
+                Destroy(gameObject); // 트리거 삭제;
+            }
+            
         }
     }
 }

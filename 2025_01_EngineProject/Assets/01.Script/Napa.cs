@@ -28,7 +28,7 @@ public class Napa : MonoBehaviour
             Destroy(gameObject);
         }
 
-        if (other.CompareTag("NapeEnemy") || other.CompareTag("PajeonEnemy"))
+        if (other.CompareTag("NapeEnemy") || other.CompareTag("PajeonEnemy") || other.CompareTag("BindaetteokEnemy"))
         {
             _healthSystem = other.gameObject.GetComponent<HealthSystem>();
             _healthSystem.GetDamaged(1);

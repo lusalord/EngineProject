@@ -8,6 +8,8 @@ TagManager:
   - Point
   - Wall
   - NapeEnemy
+  - BindaetteokEnemy
+  - Clear
   layers:
   - Default
   - TransparentFX

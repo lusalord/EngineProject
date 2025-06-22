@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace _01.Script.Enemy
 {
@@ -13,7 +14,7 @@ namespace _01.Script.Enemy
         [SerializeField] private GameObject player;
         private Vector2 _moveDir; 
         private Rigidbody2D _rb;
-        [SerializeField] private float speed;
+        public float speed;
 
         private Collider2D GetPlayerCollider()
         {
