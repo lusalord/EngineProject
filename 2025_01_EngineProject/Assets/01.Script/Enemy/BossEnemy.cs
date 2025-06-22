@@ -1,10 +1,14 @@
 using System.Collections;
 using UnityEngine;
 
-public class BossEnemy : MonoBehaviour
+namespace _01.Script.Enemy
 {
-    private IEnumerator Dash()
+    public class BossEnemy : MonoBehaviour
     {
-        yield return new WaitForSeconds(2f);
+        private bool _isMove;
+        private IEnumerator Dash()
+        {
+            yield return new WaitForSeconds(2f);
+        }
     }
 }
