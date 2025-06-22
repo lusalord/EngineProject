@@ -23,7 +23,7 @@ namespace _01.Script.Player
         {
             _rb.linearVelocity = playerInput.moveDir * moveSpeed;
             FlipX();
-            
+//            Debug.Log(playerInput.moveDir);
         }
         
 

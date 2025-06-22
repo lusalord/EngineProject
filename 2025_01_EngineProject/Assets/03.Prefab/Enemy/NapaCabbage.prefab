@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 949101556598804380}
   - component: {fileID: 2710664264606688355}
   - component: {fileID: 2300999165419973678}
+  - component: {fileID: 4630934680717642970}
   - component: {fileID: 328315212498572877}
-  - component: {fileID: 3325222174835618213}
   m_Layer: 0
   m_Name: NapaCabbage
   m_TagString: Untagged
@@ -136,6 +136,18 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.96875, y: 0.5}
   m_EdgeRadius: 0
+--- !u!114 &4630934680717642970
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5027722805469719147}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 639c6d9f500d43948a54a9136bb25c90, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!50 &328315212498572877
 Rigidbody2D:
   serializedVersion: 5
@@ -163,16 +175,3 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &3325222174835618213
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5027722805469719147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 639c6d9f500d43948a54a9136bb25c90, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0

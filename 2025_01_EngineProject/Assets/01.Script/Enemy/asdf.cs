@@ -1,6 +1,4 @@
-using System;
 using UnityEngine;
-using UnityEngine.Serialization;
 
 namespace _01.Script.Enemy
 {
@@ -13,20 +11,27 @@ namespace _01.Script.Enemy
         
         private Rigidbody2D _rb;
         
-        private HealthSystem _healthSystem;
-        [SerializeField] private int damage = 3;
-
         private void Awake()
         {
+            _rb = GetComponent<Rigidbody2D>();
             _player = GameObject.FindGameObjectWithTag("Player");
-            _healthSystem = _player.GetComponent<HealthSystem>();
+            _playerPos = _player.transform.position;
+            _moveDir = _playerPos - transform.position;
+            _moveDir.Normalize();
+            
+            float angle = Mathf.Atan2(_moveDir.y, _moveDir.x) * Mathf.Rad2Deg;
+            transform.rotation = Quaternion.AngleAxis(angle, Vector3.forward);
+        }
+
+        private void Update()
+        {
+            _rb.linearVelocity = _moveDir * 5;
         }
 
         private void OnTriggerEnter2D(Collider2D other)
         {
             if (other.gameObject.CompareTag("Player"))
             {
-                _healthSystem.GetDamaged(damage);
                 Destroy(gameObject);
             }
         }

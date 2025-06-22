@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 949101556598804380}
   - component: {fileID: 2710664264606688355}
   - component: {fileID: 2300999165419973678}
-  - component: {fileID: -8992807572148253087}
   m_Layer: 0
   m_Name: NapaCabbageItem
   m_TagString: Untagged
@@ -119,7 +118,7 @@ BoxCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 1
+  m_IsTrigger: 0
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
@@ -135,15 +134,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.96875, y: 0.5}
   m_EdgeRadius: 0
---- !u!114 &-8992807572148253087
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5027722805469719147}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 11e4155dac3cb864186e5982dbfb91be, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

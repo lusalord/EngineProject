@@ -1,4 +1,3 @@
-using System;
 using _01.Script.Manager;
 using UnityEngine;
 
@@ -7,13 +6,8 @@ namespace _01.Script.Player
     public class Player : MonoBehaviour
     {
         private HealthSystem _healthSystem;
-        public bool isGetPa = false;
-        public bool isGetNapa = false;
-
-        private void Update()
-        {
-            //Debug.Log(isGetNapa);
-        }
+        public bool isGetPa;
+        public bool isGetNapa;
 
         private void Awake()
         {
