@@ -12,14 +12,14 @@ GameObject:
   - component: {fileID: 4655249534854620493}
   - component: {fileID: 7861603195942628104}
   - component: {fileID: 6131179383557005640}
-  - component: {fileID: 6407836129971273018}
   - component: {fileID: 435065728728426011}
+  - component: {fileID: 6407836129971273018}
   - component: {fileID: -3193181776243990157}
   - component: {fileID: -8248671929490107176}
   - component: {fileID: -276176271197123648}
   m_Layer: 0
   m_Name: NapaCabbageEnemy
-  m_TagString: Untagged
+  m_TagString: NapeEnemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -157,6 +157,35 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!114 &435065728728426011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7559585908050984250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71151ae3ca55f9245b5622f4975e55f7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  detectRadius: 7
+  whatIsPlayer:
+    useTriggers: 0
+    useLayerMask: 1
+    useDepth: 0
+    useOutsideDepth: 0
+    useNormalAngle: 0
+    useOutsideNormalAngle: 0
+    layerMask:
+      serializedVersion: 2
+      m_Bits: 128
+    minDepth: 0
+    maxDepth: 0
+    minNormalAngle: 0
+    maxNormalAngle: 0
+  player: {fileID: 0}
+  speed: 3
 --- !u!95 &6407836129971273018
 Animator:
   serializedVersion: 7
@@ -179,35 +208,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!114 &435065728728426011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7559585908050984250}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 71151ae3ca55f9245b5622f4975e55f7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  detectRadius: 7
-  whatIsPlayer:
-    useTriggers: 0
-    useLayerMask: 0
-    useDepth: 0
-    useOutsideDepth: 0
-    useNormalAngle: 0
-    useOutsideNormalAngle: 0
-    layerMask:
-      serializedVersion: 2
-      m_Bits: 128
-    minDepth: 0
-    maxDepth: 0
-    minNormalAngle: 0
-    maxNormalAngle: 0
-  player: {fileID: 0}
-  speed: 3
 --- !u!114 &-3193181776243990157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,6 +236,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   napePrefab: {fileID: 5027722805469719147, guid: d58750faf3aa9d748874646115386384, type: 3}
+  firePoint: {fileID: 2336128339213402151}
+  attackRange: 7
+  projectileSpeed: 10
 --- !u!114 &-276176271197123648
 MonoBehaviour:
   m_ObjectHideFlags: 0

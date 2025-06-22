@@ -7,6 +7,7 @@ TagManager:
   - PajeonEnemy
   - Point
   - Wall
+  - NapeEnemy
   layers:
   - Default
   - TransparentFX
