@@ -1,26 +1,23 @@
+using System;
 using _01.Script.Enemy;
+using _01.Script.Interface;
 using UnityEngine;
 
 namespace _01.Script.Item
 {
-    public class Ending : MonoBehaviour
+    public class Ending : MonoBehaviour, IItem
     {
-        private GameObject childObj;
+        public GameObject clear;
+        public GameObject boss;
 
-        private void Start()
+        private void Update()
         {
-            // 자식 오브젝트 찾기
-            Transform childTransform = transform.Find("Clear");
-            childObj = childTransform.gameObject;
+            transform.position = boss.transform.position;
         }
 
         public void Use(GameObject target)
         {
-            if (!childObj.activeSelf) // 현재 비활성 상태인지 확인
-            {
-                childObj.SetActive(true);
-            }
-            Time.timeScale = 0;
+            clear.SetActive(true);
         }
     }
 }
